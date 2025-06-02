@@ -1,0 +1,18 @@
+<%- //plug data from router into this template and render %>
+
+
+<html>
+  <body>
+    <ul>
+     <% messages.forEach((msg, i ) => { %>
+      <li><%= msg.text %> by: <%= msg.user %> added: <%= msg.added %> </li>
+      <a href="/submission/<%= i %>">
+        <button>Open</button>
+      </a>
+     <% }) %>
+    </ul>
+    <a href="/new">
+      <button>New Post</button>
+    </a>
+  </body>
+</html>
