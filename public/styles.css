@@ -1,5 +1,29 @@
+:root {
+    background-color: beige;
+    padding: 2.5em;
+}
+
+ul {
+    background-color: aliceblue;
+    padding: 1em;
+    margin: 1em;
+    border: .125em solid black;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px gray;
+}
+
 li {
     list-style: none;
+    padding: .5em;
+    padding-left: 2em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1em;
+}
+
+a {
+    padding-left: 2em;
+}
+
+a:hoover {
+    font-weight: bolder;
 }
