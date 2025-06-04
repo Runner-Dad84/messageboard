@@ -8,7 +8,7 @@
   <body>
     <ul>
      <% messages.forEach((msg, i ) => { %>
-      <li>Message:<%= msg.text %> <br> By: <%= msg.user %> <br> Added: <%= msg.added %> </li>
+      <li>Comment:<%= msg.text %> <br> By: <%= msg.user %> <br> Added: <%= msg.added %> </li>
       <a href="/submission/<%= i %>">
         <button>Open</button>
       </a>
