@@ -9,7 +9,7 @@ ul {
     margin: 1em;
     border: .125em solid black;
     border-radius: 5px;
-    box-shadow: 10px 5px 5px gray;
+    box-shadow: 10px 5px 5px lightgray;
 }
 
 li {
@@ -26,4 +26,9 @@ a {
 
 a:hoover {
     font-weight: bolder;
+}
+
+button {
+    box-shadow: 4px 2px 2px lightgray;
+    border-radius: 5px;
 }
