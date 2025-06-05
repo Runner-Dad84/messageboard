@@ -13,7 +13,7 @@ app.use("/", newRouter);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-const PORT = 3012;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`My first Express app - listening on port ${PORT}!`);
 });
