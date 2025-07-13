@@ -6,16 +6,23 @@
 
 <html>
   <body>
+    <h1>Message Board</h1>
     <ul>
-     <% messages.forEach((msg, i ) => { %>
-      <li>Comment:<%= msg.text %> <br> By: <%= msg.user %> <br> Added: <%= msg.added %> </li>
+    <% if (comments.length === 0){ %>
+      <span>No comments</span>
+    <%  } else { %>
+     <% comments.forEach((c, i ) => { %>
+      <li>Comment:<%= c.comment %> <br> By: <%= c.author %> <br> Added: <%= c.date %> </li>
       <a href="/submission/<%= i %>">
-        <button>Open</button>
-      </a>
+        <button id="<%= [i] %>" class = 'viewSub'>Open</button>
+      </a>  
      <% }) %>
+     <% } %>
     </ul>
     <a href="/new">
       <button>New Post</button>
     </a>
+   <script src="/js/main.js"></script> 
+    
   </body>
 </html>

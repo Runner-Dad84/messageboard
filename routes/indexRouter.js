@@ -1,27 +1,22 @@
 // routes/indexRouter.js
-const { Router } = require("express");
-const indexRouter = Router();
+const express = require("express");
+const indexRouter = express.Router();
+const commentController = require("../controllers/commentController");
 
-//router data to be used
 
-const messages = [
-    {
-      text: "Hi there!",
-      user: "Amando",
-      added: new Date()
-    },
-    {
-      text: "Hello World!",
-      user: "Charles",
-      added: new Date()
-    }
-];
+
+
+//show all users
+indexRouter.get('/', commentController.getComments);
+indexRouter.post('/new', commentController.postNewComment);
+
+//show specific submission
+indexRouter.get("/submission/:id", commentController.getThisComment);
+
 
 //router logic - what are we doing with the data
 
-//show list of all submissions
-indexRouter.get("/", (req, res) => res.render("index", { messages }));
-
+/*
 //show specific submission
 indexRouter.get("/submission/:id", (req, res) => { 
   const message = messages[req.params.id];
@@ -42,6 +37,6 @@ res.redirect("/")
 indexRouter.get("/submission", (req, res) => { 
   res.send('You need to prodive id!!!!')
 });
-
+*/
 
 module.exports = indexRouter;

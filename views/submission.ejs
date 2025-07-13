@@ -1,17 +1,20 @@
   <head>
     <link rel="stylesheet" href="/styles.css">
   </head>
-  
+
+  <html>
+  <body>
   <div class="message">
-    <h2>Message From <%= message.user %></h2>
-    <span> User Name: <%= message.user %></span>
-    <span> Comment: <%= message.text %></span>
-    <span> Date: <%= message.added %></span>
+    <h1>Comment Details</h1>
+    <span> Message From: <%= comment.author %></h2>
+    <span> Comment: <%= comment.comment %></span>
+    <span> Date: <%= comment.date %></span>
   </div>
 
    <a href="/">
     <button>Return</button>
    </a>
-
-
+   <script src="/js/main.js"></script>
+ </body>
+ </html>
  
